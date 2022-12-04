@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Register</title>
+  </head>
+  <body class="h-[80vh] w-full flex justify-center items-center">
+
+    <div class="w-4/12 mx-auto">
+        <% if(messages.error){%>
+            <p class="text-black py-2 bg-red-200 text-center my-2"><%= messages.error %></p>
+            <% }  %>
+
+        <form method="post" action="/register" enctype="multipart/form-data">
+            <div class="flex flex-row gap-1 mb-3">
+                <input type="text" name="firstName" placeholder="First Name ..." id="" class=" rounded-md border-2 py-2 px-3 w-6/12">
+                <input type="text" name="lastName" placeholder="Last Name ..." id="" class=" rounded-md border-2 py-2 px-3 w-6/12">
+            </div>
+            <div class="mb-3">
+              <input type="text" name="email" placeholder="Email " class=" rounded-md border-2 py-2 px-3 w-full" >
+            </div>
+            <div class="mb-3">
+              <input name="password" type="password" placeholder="Password " class=" rounded-md border-2 py-2 px-3 w-full">
+            </div>
+            <div class="mb-3">
+              <input name="image" type="file" placeholder="profilePic " class=" rounded-md border-2 py-2 px-3 w-full">
+            </div>
+            <div class="">
+              <button type="submit" class="py-1 px-3 bg-green-400 rounded-md font-bold w-full text-white  ">R E G I S T E R</button>
+            </div>
+        </form>
+        <div class="flex flex-row mt-3 justify-evenly">
+            <p class="text-sm text-gray-500">Not having Account ? </p>
+            <a href="/login" class="underline">Login</a>
+        </div>
+    
+    </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js" integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  </body>
+</html>
+
